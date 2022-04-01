@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
-* Студент: [Максим Ильясов](https://up.htmlacademy.ru/adaptive/25/user/1751595).
-* Наставник: `Неизвестно`.
+* Студент: [Максим Ильясов](https://htmlacademy.ru/profile/id1751595).
+* Наставник: `Андрей Грачев`(https://htmlacademy.ru/profile/id252055).
 
 ---
 
