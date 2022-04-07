@@ -8,22 +8,19 @@
     <!-- header -->
     <header class="header">
       <nav class="header__nav container">
-        <a class="header__logo logo" href="#">
-          <img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-иконка Cat Energy">
+        <a class="header__logo" href="/">
+          <img class="header__logo-image logo" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-иконка Cat Energy">
+          <img class="header__logo-name logo-name" src="img/logo-name.svg" width="101" height="18" alt="Логотип-название Cat Energy">
         </a>
 
-        <a class="header__name logo-name" href="#">
-          <img class="logo-name__image" src="img/logo-name.svg" width="101" height="18" alt="Логотип-название Cat Energy">
-        </a>
-
-        <button class="header__nav-button">
+        <button class="header__nav-button" type="button">
           <span class="hidden">Мобильное меню</span>
         </button>
 
-        <ul class="header__nav-list nav-list">
-          <li class="nav-item nav-item--current"><a class="nav-link" href="#">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Каталог продукции</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Подбор программмы</a></li>
+        <ul class="header__nav-list nav">
+          <li class="nav__item nav__item--current"><a class="nav__link" href="/">Главная</a></li>
+          <li class="nav__item"><a class="nav__link" href="/catalog">Каталог продукции</a></li>
+          <li class="nav__item"><a class="nav__link" href="/form">Подбор программмы</a></li>
         </ul>
       </nav>
 
@@ -32,7 +29,7 @@
         <h1 class="hero__title title">Функциональное питание для котов</h1>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
         <img src="img/can.png" alt="Упаковка Cat Energy" class="hero__image">
-        <a class="hero__link button" href="#">Подобрать программу</a>
+        <a class="hero__link button" href="/form">Подобрать программу</a>
       </section>
     </header>
 
@@ -43,17 +40,15 @@
 
         <ul class="categories__list">
           <li class="categories__card">
-            <img class="categories__image" width="36" height="50" src="img/categories-slim.svg" alt="Категория похудение (Slim)">
             <h3 class="categories__title">Похудение</h3>
             <p class="categories__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="categories__link" href="#">Каталог Slim</a>
+            <a class="categories__link" href="/catalog">Каталог Slim</a>
           </li>
 
           <li>
-            <img class="categories__image" width="67" height="28" src="img/categories-pro.svg" alt="Категория похудение (Slim)">
             <h3 class="categories__title">Набор массы</h3>
             <p class="categories__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="categories__link" href="#">Каталог Pro</a>
+            <a class="categories__link" href="/catalog">Каталог Pro</a>
           </li>
         </ul>
       </section>
@@ -62,22 +57,10 @@
       <section class="advantages container">
         <h2 class="advantages__title subtitle">Как это работает</h2>
         <ul class="advantages__list">
-          <li class="advantages__item">
-            <img class="advantages__image" width="30" height="32" src="img/advantages-nutrition.svg" alt="Функциональное питание">
-            <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
-          </li>
-          <li class="advantages__item">
-            <img class="advantages__image" width="29" height="31" src="img/advantages-consistency.svg" alt="Функциональное питание">
-            <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
-          </li>
-          <li class="advantages__item">
-            <img class="advantages__image" width="25" height="30" src="img/advantages-intake.svg" alt="Функциональное питание">
-            <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
-          </li>
-          <li class="advantages__item">
-            <img class="advantages__image" width="32" height="33" src="img/advantages-time.svg" alt="Функциональное питание">
-            <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
-          </li>
+          <li class="advantages__item advantages__item--nutrition">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="advantages__item advantages__item--consistency">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="advantages__item advantages__item--intake">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="advantages__item advantages__item--time">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
         </ul>
       </section>
 
@@ -105,11 +88,15 @@
               <img class="switcher__image" width="280" height="232" src="img/switcher-chubby.png" alt="Полный кот Борис">
               <img class="switcher__image switcher__image--second" width="280" height="232" src="img/switcher-slim.png" alt="Стройный кот Борис">
             </div>
-            <label class="example__range switcher__range" for="toggle">
-              <span class="switcher__before">Было</span>
-              <input class="switcher__toggle" type="range" name="toggle" aria-label="Переключатель было-стало">
-              <span class="switcher__before">Стало</span>
-            </label>
+            <div class="example__range switcher__range" for="toggle">
+              <button class="switcher__button switcher__button--before" type="button">Было</button>
+              <div class="switcher__range">
+                <button class="switcher__range-slider" type="button">
+                  <span class="hidden">Переключатель Было-Стало</span>
+                </button>
+              </div>
+              <button class="switcher__button switcher__button--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -130,27 +117,27 @@
 
       <footer class="footer">
         <div class="container">
-          <a class="footer__name logo-name" href="#">
+          <a class="footer__name logo-name" href="/">
             <img class="logo-name__image" src="img/logo-name.svg" width="128" height="24" alt="Логотип-название Cat Energy">
           </a>
 
           <div class="footer__social social">
-            <a href="#" class="social__link">
+            <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
               <img class="social__image" width="27" height="17" src="img/social-vk.svg" alt="Сообщество Вконтакте">
             </a>
-            <a href="#" class="social__link">
+            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <img class="social__image" width="24" height="19" src="img/social-youtube.svg" alt="Youtube Канал">
             </a>
-            <a href="#" class="social__link">
-              <img class="social__image" width="20" height="17" src="img/social-youtube.svg" alt="Telegram Канал">
+            <a class="social__link" href="tg://resolve?domain=htmlacademy" target="_blank">
+              <img class="social__image" width="20" height="17" src="img/social-telegram.svg" alt="Telegram Канал">
             </a>
           </div>
         </div>
 
-        <div class="footer__copyright">
+        <a class="footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="footer__copyright-name">HTML Academy</span>
           <img class="footer__copyright-image" src="img/footer-copyright-logo.svg" alt="HTML Academy">
-        </div>
+        </a>
       </footer>
     </main>
   </body>
