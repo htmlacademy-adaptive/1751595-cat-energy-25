@@ -26,7 +26,7 @@
     </header>
 
     <main>
-      <h1 class="title title--form container">Категории</h1>
+      <h1 class="title title--form container">Подбор программы</h1>
 
       <!-- form -->
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
@@ -36,11 +36,11 @@
         <div class="form__general form__block">
           <label class="form__label" for="name">
             <span>Имя:*</span>
-            <input class="form__general-text" type="text" name="name" id="name" placeholder="Барсик">
+            <input class="form__general-text" type="text" name="name" id="name" placeholder="Барсик" required>
           </label>
           <label class="form__label" for="weight">
             <span>Вес (кг)*</span>
-            <input class="form__general-text" type="number" name="weight" id="weight" placeholder="7">
+            <input class="form__general-text" type="number" name="weight" id="weight" placeholder="7" required>
           </label>
           <label class="form__label" for="age">
             <span>Возраст (лет)</span>
@@ -51,7 +51,7 @@
         <!-- program -->
         <div class="form__radio form__block">
           <label class="form__radio-label" for="slim">
-            <input class="form__radio-input" type="radio" name="program" id="slim" value="slim">
+            <input class="form__radio-input" type="radio" name="program" id="slim" value="slim" checked>
             <span class="form__caption">Похудение</span>
           </label>
           <label class="form__radio-label" for="pro">
@@ -70,11 +70,11 @@
 
           <label class="form__label" for="email">
             <span>E-mail:*</span>
-            <input class="form__general-text form__general-text--contacts" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
+            <input class="form__general-text form__general-text--contacts" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
           </label>
           <label class="form__label" for="phone">
             <span>Телефон:*</span>
-            <input class="form__general-text form__general-text--contacts" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
+            <input class="form__general-text form__general-text--contacts" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
           </label>
         </div>
 
@@ -89,7 +89,7 @@
           <h2 class="form__title subtitle subtitle--secondary">Дополнительно</h2>
 
           <label class="form__checkbox" for="sweetener">
-            <input class="form__checkbox-option" type="checkbox" name="sweetener" id="sweetener">
+            <input class="form__checkbox-option" type="checkbox" name="sweetener" id="sweetener" checked>
             <span class="form__caption">Сахарозаменитель</span>
           </label>
           <label class="form__checkbox" for="water">
