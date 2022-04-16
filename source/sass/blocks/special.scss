@@ -1,0 +1,24 @@
+.special {
+  position: relative;
+  margin: 0;
+  padding: 187px 0 43px 0;
+  color: #ffffff;
+  text-align: center;
+  background: url("../../img/special.jpg") no-repeat center center;
+  background-color: $color-main;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  &::before {
+    $width: 78px;
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    width: $width;
+    margin-left: -$width * 0.5;
+    height: 80px;
+    content: "";
+    background-image: url("../../img/gift.svg");
+  }
+}

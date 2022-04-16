@@ -1,0 +1,119 @@
+.form {
+  padding: 0 0 32px 0;
+  font-family: $font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form__radio {
+  text-transform: uppercase;
+  padding: 22px 0 20px 0;
+}
+
+.form__radio-label {
+  margin: 0 0 13px 0;
+  display: block;
+}
+
+.form__radio-input {
+  margin: 0 16px 0 0;
+
+  &:disabled,
+  &:disabled ~ .form__caption {
+    opacity: 0.3;
+  }
+}
+
+.form__description {
+  margin: 0 0 39px 0;
+  color: $color-title;
+}
+
+.form__label {
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+}
+
+.form__label-caption {
+  padding: 0 13px 0 0;
+  text-transform: uppercase;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.form__general-text {
+  padding: 14px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  font-family: $font-secondary;
+  color: $color-font;
+  font-size: 16px;
+  line-height: 18px;
+
+  &--comment {
+    margin: 0 0 23px 0;
+    height: 150px;
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
+  }
+
+  &--email {
+    &::placeholder {
+      text-transform: uppercase;
+    }
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    border: 1px solid $color-main;
+  }
+
+  &:focus:invalid {
+    border: 1px solid #ff8282;
+  }
+}
+
+.form__check {
+  margin: 0 0 34px 0;
+}
+
+.form__checkbox {
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.form__checkbox-option {
+  margin: 0 16px 0 0;
+
+  &:disabled,
+  &:disabled ~ .form__caption {
+    opacity: 0.3;
+  }
+}
+
+.form__title {
+  margin: 0 0 35px 0;
+}
+
+.form__submit {
+  margin: 0 0 21px 0;
+}
+
+.form__note {
+  display: block;
+  text-align: center;
+}

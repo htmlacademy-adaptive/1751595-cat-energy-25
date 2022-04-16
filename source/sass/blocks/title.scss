@@ -1,0 +1,28 @@
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-title;
+
+  &--hero {
+    color: #ffffff;
+  }
+
+  &--pages {
+    max-width: $container;
+    margin: 0 auto;
+    padding-top: 27px;
+  }
+
+  &--catalog {
+    padding-bottom: 41px;
+    margin-bottom: 8px;
+  }
+
+  &--form {
+    margin-bottom: 37px;
+  }
+}

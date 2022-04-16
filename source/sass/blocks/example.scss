@@ -1,0 +1,39 @@
+.example {
+  padding: 25px 0 40px 0;
+  background-color: $color-example-home;
+}
+
+.example__title {
+  margin: 0 0 40px 0;
+}
+
+.example__info {
+  margin-bottom: 40px;
+}
+
+.example__description {
+  margin: 0 0 20px 0;
+}
+
+.example__list {
+  margin: 0 0 20px 0;
+}
+
+.example__item-name {
+  font-family: $font-secondary;
+  color: $color-title;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.example__item-description {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.example__costs {
+  font-family: $font-secondary;
+  color: $color-title;
+  text-transform: uppercase;
+  line-height: 20px;
+}

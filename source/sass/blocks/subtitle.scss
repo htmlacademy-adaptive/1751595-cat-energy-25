@@ -1,0 +1,30 @@
+.subtitle {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-family: $font-secondary;
+  color: $color-title;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+  &--home {
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &::after {
+    margin: 0 0 0 22px;
+    content: "";
+    position: absolute;
+    background-color: $color-main;
+    width: 100vw;
+    height: 2px;
+    top: 17px;
+    left: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.advantages {
+  padding: 20px 0 49px 0;
+}
+
+.advantages__item {
+  $side: 60px;
+  padding: 0 0 0 ($side + 20);
+  position: relative;
+
+  &:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $side;
+    height: $side;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-main;
+  }
+
+  &--nutrition::before {
+    content: url("../../img/advantages-nutrition.svg");
+  }
+
+  &--consistency::before {
+    content: url("../../img/advantages-consistency.svg");
+  }
+
+  &--intake::before {
+    content: url("../../img/advantages-intake.svg");
+  }
+
+  &--time::before {
+    content: url("../../img/advantages-time.svg");
+  }
+}
+
+.advantages__title {
+  margin-bottom: 40px;
+}

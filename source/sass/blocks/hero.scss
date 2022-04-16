@@ -1,0 +1,23 @@
+.hero {
+  padding-top: 27px;
+  color: #ffffff;
+  font-family: $font-secondary;
+}
+
+.hero__title {
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.hero__slogan {
+  margin: 0 0 29px 0;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 14px;
+}
+
+.hero__image {
+  width: 280;
+  height: 270;
+  margin: 0 auto;
+}

@@ -1,0 +1,28 @@
+.social {
+  margin: 0 0 22px 0;
+  padding: 20px 0 21px 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.social__link {
+  &:not(:last-child) {
+    margin-right: 26px;
+  }
+}
+
+
+.social__icon {
+  &:hover > path {
+    fill: $color-main;
+  }
+
+  &:active > path {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
