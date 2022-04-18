@@ -2,6 +2,12 @@
   padding: 20px 0 49px 0;
 }
 
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .advantages__item {
   $side: 60px;
   padding: 0 0 0 ($side + 20);
@@ -24,19 +30,19 @@
   }
 
   &--nutrition::before {
-    content: url("../../img/advantages-nutrition.svg");
+    content: url("../img/advantages-nutrition.svg");
   }
 
   &--consistency::before {
-    content: url("../../img/advantages-consistency.svg");
+    content: url("../img/advantages-consistency.svg");
   }
 
   &--intake::before {
-    content: url("../../img/advantages-intake.svg");
+    content: url("../img/advantages-intake.svg");
   }
 
   &--time::before {
-    content: url("../../img/advantages-time.svg");
+    content: url("../img/advantages-time.svg");
   }
 }
 

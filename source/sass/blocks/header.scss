@@ -6,7 +6,7 @@
 
   &--home {
     border-bottom: none;
-    // background: $color-header-background url("../../img/cat.jpg") no-repeat center center;
+    // background: $color-header-background url("../img/cat.jpg") no-repeat center center;
   }
 }
 
@@ -22,7 +22,7 @@
 
 .header__nav-button {
   display: block;
-  background: url("../../img/mobile-button-open.svg") no-repeat center center;
+  background: url("../img/mobile-button-open.svg") no-repeat center center;
   cursor: pointer;
   border: none;
 }

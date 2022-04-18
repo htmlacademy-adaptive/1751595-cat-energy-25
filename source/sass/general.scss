@@ -16,28 +16,9 @@
   font-display: swap;
 }
 
-body {
-  margin: 0;
-  font-family: $font-main;
-  font-size: 14px;
-  line-height: 18px;
-  color: $color-font;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 a {
   color: $color-title;
   text-decoration: none;
-}
-
-p {
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -46,5 +27,12 @@ p {
 }
 
 .hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
