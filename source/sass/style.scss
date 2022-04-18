@@ -1,1 +1,30 @@
-// Начните писать стили здесь
+@import "variables";
+@import "general";
+
+// blocks home
+@import "blocks/title";
+@import "blocks/subtitle";
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/logo-name";
+@import "blocks/nav";
+@import "blocks/hero";
+@import "blocks/button";
+@import "blocks/categories";
+@import "blocks/advantages";
+@import "blocks/example";
+@import "blocks/switcher";
+@import "blocks/location";
+@import "blocks/footer";
+@import "blocks/social";
+
+// blocks catalog
+@import "blocks/catalog";
+@import "blocks/product";
+@import "blocks/more";
+@import "blocks/additional";
+@import "blocks/special";
+
+// blocks form
+@import "blocks/form";

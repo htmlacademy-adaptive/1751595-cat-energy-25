@@ -1,0 +1,44 @@
+.header {
+  margin: 0;
+  padding: 11px 0 17px 0;
+  position: relative;
+  border-bottom: 1px solid $color-borders-main;
+
+  &--home {
+    padding-bottom: 0;
+    border-bottom: none;
+    // background: $color-header-background url("../img/cat.jpg") no-repeat center center;
+  }
+}
+
+.header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__nav-button {
+  display: block;
+  background: url("../img/mobile-button-open.svg") no-repeat center center;
+  cursor: pointer;
+  border: none;
+}
+
+.header__nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &--home {
+    background: #ffffff;
+  }
+}
+
+.header__nav-list {
+  position: absolute;
+  display: none;
+}
