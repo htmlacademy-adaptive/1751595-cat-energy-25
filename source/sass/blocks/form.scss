@@ -44,7 +44,8 @@
 
 .form__general-text {
   padding: 14px;
-  border: 1px solid #e7e7e7;
+  outline: 1px solid #e7e7e7;
+  border: none;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
@@ -73,15 +74,15 @@
   }
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    outline: 1px solid #cdcdcd;
   }
 
   &:focus {
-    border: 1px solid $color-main;
+    outline: 2px solid $color-main;
   }
 
   &:focus:invalid {
-    border: 1px solid #ff8282;
+    outline: 2px solid #ff8282;
   }
 }
 
