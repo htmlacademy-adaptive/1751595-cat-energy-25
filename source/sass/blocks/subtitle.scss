@@ -28,4 +28,9 @@
     top: 17px;
     left: 100%;
   }
+
+  @media (min-width: $width-tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

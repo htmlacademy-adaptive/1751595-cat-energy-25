@@ -1,17 +1,63 @@
 .header {
-  margin: 0;
-  padding: 11px 0 17px 0;
-  position: relative;
-  border-bottom: 1px solid $color-borders-main;
-
-  &--home {
-    padding-bottom: 0;
-    border-bottom: none;
-    // background: $color-header-background url("../img/cat.jpg") no-repeat center center;
+  @media (min-width: $width-desktop) {
+    &--home {
+      $hero-desktop-width: 1044px;
+      background: url("../../img/hero-desktop.jpg") no-repeat calc(50% + $hero-desktop-width / 2),
+        linear-gradient(90deg, transparent 50%, #61a53a 50%);
+    }
   }
 }
 
-.header__logo {
+.header__head {
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    padding: 24px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: $container-tablet;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 53px 0 0 0;
+    max-width: $container-desktop;
+    margin: 0 auto;
+  }
+}
+
+.header__brand {
+  padding: 10px 20px 17px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+
+  &--home {
+    border-bottom: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header__logo-link {
+  padding: 13px 0 7px 90px;
+  background: url("../img/logo-mobile.svg") no-repeat;
+  display: inline-block;
+
+  @media (min-width: $width-tablet) {
+    padding: 20px 0 8px 73px;
+    background: url("../img/logo-tablet.svg") no-repeat;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 22px 0 15px 84px;
+    background: url("../img/logo-desktop.svg") no-repeat;
+  }
+
   &:hover {
     opacity: 0.8;
   }
@@ -21,24 +67,36 @@
   }
 }
 
-.header__nav-button {
-  display: block;
-  background: url("../img/mobile-button-open.svg") no-repeat center center;
-  cursor: pointer;
-  border: none;
-}
+.header__logo {
+  width: 101px;
+  height: 18px;
 
-.header__nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-
-  &--home {
-    background: #ffffff;
+  @media (min-width: $width-desktop) {
+    width: 118px;
+    height: 22px;
   }
 }
 
-.header__nav-list {
-  position: absolute;
-  display: none;
+
+.header__button {
+  margin: 0;
+  padding: 0;
+  background: url("../img/mobile-button-open.svg") no-repeat;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  border: none;
+
+  &--js {
+    display: none;
+  }
+
+  &--active {
+    background: url("../img/mobile-button-close.svg") no-repeat center center;
+    background-size: contain;
+  }
+
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
 }

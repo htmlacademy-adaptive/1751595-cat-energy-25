@@ -9,20 +9,27 @@
   <body class="page__body">
     <!-- header -->
     <header class="header">
-      <nav class="header__nav">
-        <a class="header__logo" href="index.html">
-          <img class="header__logo-image logo" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип-иконка Cat Energy">
-          <img class="header__logo-name logo-name" src="img/logo-name.svg" width="101" height="18" alt="Логотип-название Cat Energy">
-        </a>
+      <nav class="header__head">
+        <div class="header__brand header__brand--home container">
+          <a class="header__logo-link" href="index.html">
+            <img class="header__logo logo-name" src="img/logo-name.svg" alt="Логотип Cat Energy">
+          </a>
 
-        <button class="header__nav-button" type="button">
-          <span class="hidden">Мобильное меню</span>
-        </button>
+          <button id="menu-button" class="header__button header__button--js" onclick="toggleMenu()" type="button">
+            <span class="hidden">Мобильное меню</span>
+          </button>
+        </div>
 
-        <ul class="header__nav-list nav">
-          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-          <li class="nav__item nav__item--current"><a class="nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="nav__item"><a class="nav__link" href="form.html">Подбор программмы</a></li>
+        <ul id="menu" class="header__nav nav nav--home nav--js">
+          <li class="nav__item">
+            <a class="nav__link" href="index.html"><span class="nav__page">Главная</span></a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html"><span class="nav__page nav__page--current">Каталог продукции</span></a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="form.html"><span class="nav__page">Подбор программы</span></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -365,5 +372,6 @@
         </div>
       </footer>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1,32 +1,86 @@
 .advantages {
   padding: 20px 0 49px 0;
+  counter-reset: advantages;
+
+  @media (min-width: $width-tablet) {
+    padding: 45px 0 10px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 71px 0 26px 0;
+  }
 }
 
 .advantages__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $width-tablet) {
+    padding: 0 79px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0;
+    flex-wrap: nowrap;
+  }
 }
 
 .advantages__item {
-  $side: 60px;
-  padding: 0 0 0 ($side + 20);
+  margin: 0 0 20px 0;
+  padding: 0 0 0 80px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
 
-  &:not(:last-child) {
-    margin: 0 0 20px 0;
+  @media (min-width: $width-tablet) {
+    margin: 0 15px 37px 0;
+    padding: 40px 0 57px 0;
+    width: 250px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin: 0;
   }
 
   &::before {
     position: absolute;
-    left: 0;
+    width: 60px;
+    height: 60px;
     top: 0;
-    width: $side;
-    height: $side;
+    left: 0;
+    background-color: $color-main;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color-main;
+
+    @media (min-width: $width-tablet) {
+      position: relative;
+      margin: 0 0 31px 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $width-tablet) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      counter-increment: advantages;
+      content: counter(advantages);
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      font-family: $font-secondary;
+      z-index: -1;
+    }
   }
 
   &--nutrition::before {
@@ -48,4 +102,8 @@
 
 .advantages__title {
   margin-bottom: 40px;
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 32px;
+  }
 }

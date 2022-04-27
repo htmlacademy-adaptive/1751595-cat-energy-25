@@ -1,0 +1,31 @@
+.copyright {
+  padding: 22px 0;
+  font-size: 16px;
+  line-height: 18px;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover .copyright__path {
+    fill: $color-main;
+  }
+
+  &:active .copyright__path {
+    fill: $color-main;
+    opacity: 0.3;
+  }
+}
+
+
+.copyright__name {
+  @media (min-width: $width-tablet) {
+    margin-right: 22px;
+  }
+}

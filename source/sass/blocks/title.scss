@@ -9,10 +9,14 @@
 
   &--hero {
     color: #ffffff;
+
+    @media (min-width: $width-tablet) {
+      color: $color-title;
+    }
   }
 
   &--pages {
-    max-width: $container;
+    max-width: $container-mobile;
     margin: 0 auto;
     padding-top: 27px;
   }
@@ -24,5 +28,10 @@
 
   &--form {
     margin-bottom: 37px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
