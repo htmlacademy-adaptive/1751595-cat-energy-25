@@ -1,7 +1,10 @@
 const menuButton = document.querySelector('#menu-button')
 const menu = document.querySelector('#menu')
 
-start()
+if (menuButton && menu) {
+  start()
+  menuButton.addEventListener('click', toggleMenu)
+}
 
 function start() {
   menuButton.classList.remove('header__button--js')
