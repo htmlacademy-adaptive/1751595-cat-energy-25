@@ -1,4 +1,9 @@
-$container: 280px;
+$width-tablet: 768px;
+$width-desktop: 1440px;
+
+$container-mobile: 280px;
+$container-tablet: 708px;
+$container-desktop: 1220px;
 
 $color-main: #68b738;
 $color-main-hover: #5eaa2f;
@@ -19,3 +24,6 @@ $color-button: #ffffff;
 
 $font-main: "Arial", sans-serif;
 $font-secondary: "Oswald", sans-serif;
+
+$z-header: -20;
+$z-hero-image: -10;

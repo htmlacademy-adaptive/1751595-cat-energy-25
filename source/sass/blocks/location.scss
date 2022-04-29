@@ -1,31 +1,71 @@
 .location {
   background-color: $color-secondary;
+
+  &--home {
+    background-color: #ffffff;
+  }
+
+  @media (min-width: $width-desktop) {
+    background-color: $color-secondary;
+    position: relative;
+  }
 }
 
 .location__info {
-  padding: 26px 20px;
+  padding: 26px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  &--home {
+  @media (min-width: $width-tablet) {
+    padding: 60px 40px 56px 40px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $width-desktop) {
+    $width: 565px;
+    padding: 56px 80px;
+    box-sizing: border-box;
+    width: 565px;
+    position: absolute;
+    top: 95px;
+    left: calc(50% - $width - 45px);
     background-color: #ffffff;
   }
 }
 
 .location__title {
   margin: 0;
+  max-width: 140px;
   font-family: $font-secondary;
   font-weight: 400;
   color: $color-location-title;
   font-size: 16px;
   line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $width-tablet) {
+    max-width: 171px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .location__address {
   font-style: normal;
 }
 
+.location__city {
+  display: block;
+}
+
 .location__map {
   width: 100%;
+  height: 362px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $width-tablet) {
+    height: 400px;
+  }
 }

@@ -1,14 +1,14 @@
 .button {
+  padding: 10px 0;
   font-family: $font-secondary;
   color: $color-button;
   background-color: $color-main;
   font-size: 16px;
   line-height: 20px;
   display: block;
-  padding: 10px 0;
+  // width: 100%;
   text-align: center;
   text-transform: uppercase;
-  width: 100%;
   border: none;
 
   &:hover {
@@ -32,5 +32,13 @@
     font-size: 14px;
     line-height: 18px;
     padding: 7px 0;
+
+    @media (min-width: $width-tablet) {
+      padding: 14px 26px;
+      display: inline-block;
+      width: auto;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }

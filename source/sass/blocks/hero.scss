@@ -1,24 +1,78 @@
 .hero {
-  padding-top: 27px;
-  color: #ffffff;
-  font-family: $font-secondary;
-  background: url("../img/hero-cat.jpg") no-repeat;
+  padding: 27px 0 0 0;
+  background: url("../img/hero-mobile.jpg") no-repeat top center,
+    linear-gradient(to bottom, transparent 302px, #ffffff 302px 100%),
+    linear-gradient(90deg, #63a73b 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, #62a53a  50%);
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    background: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $container-desktop;
+    margin: 0 auto;
+    background: none;
+  }
+}
+
+.hero__body {
+  background: url("../img/can.png") no-repeat center bottom 45px;
+
+  @media (min-width: $width-tablet) {
+    padding: 62px 0 526px 90px;
+    box-sizing: border-box;
+    background: url("../img/can-tablet.jpg") no-repeat center bottom;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 111px 506px 185px 80px;
+    display: inline-block;
+    background: url("../img/can-desktop.png") no-repeat right bottom;
+  }
 }
 
 .hero__title {
   margin: 0 0 25px 0;
   text-align: center;
+  color: #ffffff;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 0 41px 0;
+    text-align: left;
+    color: $color-title;
+    max-width: 420px;
+  }
 }
 
 .hero__slogan {
-  margin: 0 0 29px 0;
+  margin: 0 0 302px 0;
+  padding: 0;
   text-align: center;
+  font-family: $font-secondary;
   text-transform: uppercase;
-  line-height: 14px;
+  color: #ffffff;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 0 49px 0;
+    color: $color-title;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    max-width: 420px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin: 0 0 52px 0;
+  }
 }
 
-.hero__image {
-  width: 280;
-  height: 270;
-  margin: 0 auto;
+.hero__link {
+  @media (min-width: $width-tablet) {
+    padding: 14px 26px;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

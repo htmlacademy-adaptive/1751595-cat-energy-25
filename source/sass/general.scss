@@ -22,8 +22,16 @@ a {
 }
 
 .container {
-  max-width: $container;
+  max-width: $container-mobile;
   margin: 0 auto;
+
+  @media (min-width: $width-tablet) {
+    max-width: $container-tablet;
+  }
+
+  @media (min-width: $width-desktop) {
+    max-width: $container-desktop;
+  }
 }
 
 .hidden {

@@ -1,7 +1,116 @@
 .nav {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
   font-family: $font-secondary;
   font-weight: 500;
+  text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
-  color: #000000;
+  z-index: 20;
+  background-color: #ffffff;
+  width: 100%;
+
+  &--home {
+    border-top: 1px solid #e6e6e6;
+
+    @media (min-width: $width-tablet) {
+      border-top: none;
+      font-weight: 400;
+    }
+
+    @media (min-width: $width-desktop) {
+      background: none;
+    }
+  }
+
+  &--js {
+    position: relative;
+    display: flex;
+  }
+
+  &--active {
+    display: flex;
+  }
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.nav__item {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $width-tablet) {
+    border-bottom: none;
+
+    &:not(:last-child) {
+      margin: 0 35px 0 0;
+    }
+  }
+}
+
+.nav__link {
+  margin: 0 auto;
+  padding: 22px 0 24px 0;
+  display: block;
+  max-width: $container-mobile;
+  text-align: center;
+
+  &--home {
+    @media (min-width: $width-desktop) {
+      margin: 0;
+      padding: 0;
+      color: #ffffff;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin: 0;
+    padding: 5px 0 0 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0;
+  }
+}
+
+.nav__page {
+  display: inline-block;
+  position: relative;
+
+  &--current::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: $color-main;
+    left: 0;
+    bottom: -8px;
+  }
+
+  &--home::after {
+    @media (min-width: $width-desktop) {
+      background-color: #ffffff;
+    }
+  }
 }
