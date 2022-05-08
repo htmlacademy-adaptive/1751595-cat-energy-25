@@ -6,10 +6,10 @@
   font-size: 16px;
   line-height: 20px;
   display: block;
-  // width: 100%;
   text-align: center;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 
   &:hover {
     background-color: $color-main-hover;

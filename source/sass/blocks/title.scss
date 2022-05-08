@@ -1,11 +1,12 @@
 .title {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-family: $font-secondary;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: $color-title;
+  width: $container-mobile;
 
   &--hero {
     color: #ffffff;
@@ -13,12 +14,6 @@
     @media (min-width: $width-tablet) {
       color: $color-title;
     }
-  }
-
-  &--pages {
-    max-width: $container-mobile;
-    margin: 0 auto;
-    padding-top: 27px;
   }
 
   &--catalog {
@@ -31,7 +26,15 @@
   }
 
   @media (min-width: $width-tablet) {
+    margin: 0 auto;
+    padding: 64px 0 54px 0;
     font-size: 60px;
     line-height: 60px;
+    width: $container-tablet;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 74px 0 56px 0;
+    width: $container-desktop;
   }
 }
