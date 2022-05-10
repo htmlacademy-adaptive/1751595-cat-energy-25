@@ -1,0 +1,21 @@
+.catalog {
+  padding: 8px 0 0 0;
+  border-top: 1px solid #ebebeb;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 auto;
+    width: $container-tablet;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    border-top: none;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: $container-desktop;
+    row-gap: 62px;
+    column-gap: 80px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,24 +1,60 @@
 .special {
-  position: relative;
+  padding: 187px 61px 43px 58px;
+  background: url("../img/special.jpg") no-repeat;
+
+  @media (min-width: $width-tablet) {
+    padding: 71px 124px 69px 422px;
+    background: url("../img/special-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 185px 43px 42px 41px;
+    background: url("../img/special-desktop.jpg") no-repeat;
+  }
+}
+
+.special__text {
   margin: 0;
-  padding: 187px 0 43px 0;
+  position: relative;
   color: #ffffff;
   text-align: center;
-  background: url("../img/special.jpg") no-repeat center center;
-  background-color: $color-main;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
+
+  @media (min-width: $width-tablet) {
+    text-align: left;
+  }
+
+  @media (min-width: $width-tablet) {
+    text-align: center;
+  }
 
   &::before {
     $width: 78px;
+    $height: 80px;
+
     position: absolute;
-    top: 59px;
-    left: 50%;
     width: $width;
-    margin-left: -$width * 0.5;
-    height: 80px;
+    height: $height;
+    top: -48px - $height;
+    left: calc(50% - $width * 0.5);
+    background: url("../img/gift.svg");
     content: "";
-    background-image: url("../img/gift.svg");
+
+    @media (min-width: $width-tablet) {
+      $width: 80px;
+      $height: 82px;
+
+      left: -265px - $width;
+      top: calc(50% - $height * 0.5);
+    }
+
+    @media (min-width: $width-desktop) {
+      $width: 80px;
+      $height: 82px;
+
+      top: -47px - $height;
+      left: calc(50% - $width * 0.5);
+    }
   }
 }
