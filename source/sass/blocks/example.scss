@@ -3,12 +3,12 @@
   background-color: $color-example-home;
 
   @media (min-width: $width-tablet) {
-    padding: 43px 0 0 0;
-    background: linear-gradient(to top, $color-example-home 300px, #ffffff 300px 100%); // 462 px in figma
+    padding: 43px 0 56px 0;
+    background: linear-gradient(to top, $color-example-home 462px, #ffffff 462px 100%);
   }
 
   @media (min-width: $width-desktop) {
-    padding: 0;
+    padding: 0 0 65px 0;
     background: linear-gradient(to bottom, #ffffff 179px, $color-example-home 179px 100%);
   }
 

@@ -105,17 +105,21 @@
 
           <div class="example__switcher switcher">
             <div class="example__images switcher__images">
-              <img class="switcher__image" width="280" height="232" src="img/switcher-chubby.png" alt="Полный кот Борис">
-              <img class="switcher__image switcher__image--second" width="280" height="232" src="img/switcher-slim.png" alt="Стройный кот Борис">
+              <div class="switcher__image-block switcher__image-block--before">
+                <img id="example-before" class="switcher__image switcher__image--before switcher__image--active" width="280" height="232" src="img/switcher-chubby-tablet.png" alt="Полный кот Борис">
+              </div>
+              <div class="switcher__image-block switcher__image-block--after">
+                <img id="example-after" class="switcher__image switcher__image--after" width="280" height="232" src="img/switcher-slim-tablet.png" alt="Стройный кот Борис">
+              </div>
             </div>
             <div class="example__range switcher__range">
-              <button class="switcher__button switcher__button--before" type="button">Было</button>
-              <div class="switcher__range-indicator">
-                <button class="switcher__range-slider" type="button">
+              <button id="button-before" class="switcher__button switcher__button--before" type="button">Было</button>
+              <div id="range-indicator" class="switcher__range-indicator switcher__range-indicator--before">
+                <button id="button-slider" class="switcher__range-slider" type="button">
                   <span class="hidden">Переключатель Было-Стало</span>
                 </button>
               </div>
-              <button class="switcher__button switcher__button--after" type="button">Стало</button>
+              <button id="button-after" class="switcher__button switcher__button--after" type="button">Стало</button>
             </div>
           </div>
         </div>

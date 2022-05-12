@@ -1,5 +1,4 @@
 .switcher__button {
-  margin: 0 13px 0 0;
   padding: 8px 6px;
   font-family: $font-secondary;
   color: $color-title;
@@ -9,9 +8,101 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    padding: 6px 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &::after {
+    $width: 45px;
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: calc(50% - $width / 2);
+    width: $width;
+
+    @media (min-width: $width-tablet) {
+      border-bottom: 1px dotted #b8b8b8;
+    }
+  }
+
+  &--before {
+    margin: 0 13px 0 0;
+  }
 
   &--after {
     margin: 0 0 0 13px;
+  }
+}
+
+.switcher__button:hover {
+  @media (min-width: $width-tablet) {
+    &::after {
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+}
+
+.switcher__button:active {
+  @media (min-width: $width-tablet) {
+    &::after {
+      border-bottom: none;
+    }
+  }
+}
+
+.switcher__images {
+  position: relative;
+
+  @media (min-width: $width-tablet) {
+    margin: 0 auto 25px auto;
+    width: 592px;
+    height: 511px;
+  }
+}
+
+// https://codepen.io/josephwong2004/pen/NWRGxdR
+.switcher__image-block {
+  @media (min-width: $width-tablet) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--before {
+    @media (min-width: $width-tablet) {
+      background: url("../img/switcher-chubby-tablet.png") no-repeat;
+      background-position: top 0 left -15px;
+      width: 50%;
+      left: 0;
+    }
+  }
+
+  &--after {
+    @media (min-width: $width-tablet) {
+      background: url("../img/switcher-slim-tablet.png") no-repeat;
+      background-position: top 0 right -5px;
+      width: 50%;
+      right: 0;
+    }
+  }
+}
+
+.switcher__image {
+  margin: 0 0 15px 0;
+  display: none;
+  height: 232px;
+
+  &--active {
+    display: block;
+
+    @media (min-width: $width-tablet) {
+      display: none;
+    }
   }
 }
 
@@ -19,6 +110,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $width-tablet) {
+    justify-content: space-between;
+  }
 }
 
 .switcher__range-indicator {
@@ -29,32 +124,84 @@
   border: 1px solid $color-example-borders-home;
   border-radius: 6px;
 
-  &::before {
-    position: absolute;
-    top: 4px;
-    left: 6px;
-    display: none;
-    width: 37px;
-    height: 6px;
-    content: "";
-    background-color: $color-main;
-    border-radius: 6px;
+  &--before {
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 6px;
+      display: inline-block;
+      width: 37px;
+      height: 6px;
+      content: "";
+      background-color: $color-main;
+      border-radius: 6px;
+    }
   }
 
-  &::after {
-    position: absolute;
-    top: 4px;
-    right: 6px;
-    display: inline-block;
-    width: 37px;
+  &--after {
+    &::after {
+      position: absolute;
+      top: 4px;
+      right: 6px;
+      display: inline-block;
+      width: 37px;
+      height: 6px;
+      content: "";
+      background-color: $color-main;
+      border-radius: 6px;
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    &--before::before,
+    &--after::after {
+      display: none;
+    }
+
+    margin: 14px 0;
+    width: 100%;
     height: 6px;
-    content: "";
-    background-color: $color-main;
-    border-radius: 6px;
+    background-color: #dcdcdc;
+    border: none;
   }
 }
 
 .switcher__range-slider {
   position: absolute;
   display: none;
+
+  @media (min-width: $width-tablet) {
+    padding: 13px;
+    width: 34px;
+    height: 34px;
+    left: calc(50% - 34px / 2);
+    top: calc(50% - 34px / 2);
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 1px 3px 0 rgba($color: #000000, $alpha: 0.16);
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: calc(50% - 8px / 2);
+      left: calc(50% - 8px / 2);
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      display: inline-block;
+      background-color: $color-main;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba($color: #000000, $alpha: 0.19);
+  }
+
+  &:active {
+    border: 1px solid $color-main;
+    box-shadow: 0 3px 5px 0 rgba($color: #000000, $alpha: 0.2);
+  }
 }

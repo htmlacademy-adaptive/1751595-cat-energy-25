@@ -64,6 +64,8 @@
   height: 362px;
   margin: 0;
   padding: 0;
+  border: none;
+  outline: none;
 
   @media (min-width: $width-tablet) {
     height: 400px;
