@@ -1,0 +1,40 @@
+.line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 50%;
+    height: 2px;
+    background-color: $color-main;
+    z-index: -1;
+
+    @media (min-width: $width-tablet) {
+      top: 24px;
+      width: 100%;
+    }
+  }
+}
+
+.line__contacts-br {
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+}
+
+.line__text {
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 0 22px 0 0;
+
+  @media (min-width: $width-tablet) {
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+}
+
+.line__second-line {
+  display: block;
+}

@@ -1,28 +1,15 @@
 .title {
   margin: 0 auto;
-  padding: 0;
+  padding: 27px 0 0 0;
   font-family: $font-secondary;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: $color-title;
-  width: $container-mobile;
-
-  &--hero {
-    color: #ffffff;
-
-    @media (min-width: $width-tablet) {
-      color: $color-title;
-    }
-  }
+  max-width: $container-mobile;
 
   &--catalog {
     padding-bottom: 41px;
-    margin-bottom: 8px;
-  }
-
-  &--form {
-    margin-bottom: 37px;
   }
 
   @media (min-width: $width-tablet) {
@@ -30,11 +17,24 @@
     padding: 64px 0 54px 0;
     font-size: 60px;
     line-height: 60px;
-    width: $container-tablet;
+    max-width: $container-tablet;
   }
 
   @media (min-width: $width-desktop) {
     padding: 74px 0 56px 0;
-    width: $container-desktop;
+    max-width: $container-desktop;
+  }
+
+  &--form {
+    margin-bottom: 37px;
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 0;
+      max-width: $container-tablet_form;
+    }
+
+    @media (min-width: $width-desktop) {
+      max-width: $container-desktop;
+    }
   }
 }
