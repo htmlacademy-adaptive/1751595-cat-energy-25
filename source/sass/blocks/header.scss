@@ -1,4 +1,14 @@
 .header {
+  border-bottom: 1px solid #e6e6e6;
+
+  &--home {
+    border-bottom: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    border-bottom: none;
+  }
+
   @media (min-width: $width-desktop) {
     &--home {
       $hero-desktop-width: 1044px;
@@ -31,11 +41,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e6e6e6;
-
-  &--home {
-    border-bottom: none;
-  }
 
   @media (min-width: $width-tablet) {
     margin: 0;

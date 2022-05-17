@@ -13,12 +13,11 @@
   z-index: 20;
   background-color: #ffffff;
   width: 100%;
+  border-top: 1px solid #e6e6e6;
+
 
   &--home {
-    border-top: 1px solid #e6e6e6;
-
     @media (min-width: $width-tablet) {
-      border-top: none;
       font-weight: 400;
     }
 
@@ -37,6 +36,7 @@
   }
 
   @media (min-width: $width-tablet) {
+    border-top: none;
     display: flex;
     flex-direction: row;
     justify-content: end;
