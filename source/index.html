@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon.png"> <!-- 180×180 -->
+    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
+
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -106,10 +112,13 @@
           <div class="example__switcher switcher">
             <div class="example__images switcher__images">
               <div class="switcher__image-block switcher__image-block--before">
-                <img id="example-before" class="switcher__image switcher__image--before switcher__image--active" width="280" height="232" src="img/switcher-chubby-tablet.png" alt="Полный кот Борис">
+                <img id="example-before" class="switcher__image switcher__image--before switcher__image--active" width="280" height="232" alt="Полный кот Борис"
+                    src="img/switcher-chubby.png" srcset="img/switcher-chubby-2x.png 2x, img/switcher-chubby.png 1x">
               </div>
               <div class="switcher__image-block switcher__image-block--after">
-                <img id="example-after" class="switcher__image switcher__image--after" width="280" height="232" src="img/switcher-slim-tablet.png" alt="Стройный кот Борис">
+                <img id="example-after" class="switcher__image switcher__image--after" width="280" height="232" alt="Стройный кот Борис"
+                src="img/switcher-slim.png" srcset="img/switcher-slim-2x.png 2x, img/switcher-slim.png 1x">
+                <!-- <img id="example-after" class="switcher__image switcher__image--after" width="280" height="232" src="img/switcher-slim.png" alt="Стройный кот Борис"> -->
               </div>
             </div>
             <div class="example__range switcher__range">
@@ -182,6 +191,6 @@
       </footer>
     </main>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,15 +1,36 @@
 .special {
   padding: 187px 61px 43px 58px;
-  background: url("../img/special.jpg") no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/special-2x.jpg") no-repeat;
+  }
+
+  @media (resolution: 1dppx) {
+    background: url("../img/special.jpg") no-repeat;
+  }
+
+  @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
+    background: url("../img/special-tablet-2x.jpg") no-repeat;
+  }
+
+  @media (min-width: $width-tablet) and (resolution: 1dppx) {
+    background: url("../img/special-tablet.jpg") no-repeat;
+  }
 
   @media (min-width: $width-tablet) {
     padding: 71px 124px 69px 422px;
-    background: url("../img/special-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: $width-desktop) and (min-resolution: 2dppx) {
+    background: url("../img/special-desktop-2x.jpg") no-repeat;
+  }
+
+  @media (min-width: $width-desktop) and (resolution: 1dppx) {
+    background: url("../img/special-desktop.jpg") no-repeat;
   }
 
   @media (min-width: $width-desktop) {
     padding: 185px 43px 42px 41px;
-    background: url("../img/special-desktop.jpg") no-repeat;
   }
 }
 
