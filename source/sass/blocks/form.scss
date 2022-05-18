@@ -254,15 +254,20 @@ $checked-circle-radius-tablet: 9px;
 .form__radio-label {
   position: relative;
   padding: 0 0 0 ($empty-circle-radius * 2 + 16px);
+  min-height: $empty-circle-radius * 2;
+  display: flex;
+  align-items: center;
 
   @media (min-width: $width-tablet) {
+    min-height: $empty-circle-radius-tablet * 2;
     padding: 0 0 0 ($empty-circle-radius-tablet * 2 + 20px);
   }
 
   &::before {
     content: "";
     position: absolute;
-    top: calc(50% - $empty-circle-radius);
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: $empty-circle-radius * 2;
     height: $empty-circle-radius * 2;
@@ -272,7 +277,6 @@ $checked-circle-radius-tablet: 9px;
     box-sizing: border-box;
 
     @media (min-width: $width-tablet) {
-      top: calc(50% - $empty-circle-radius-tablet);
       width: $empty-circle-radius-tablet * 2;
       height: $empty-circle-radius-tablet * 2;
     }
@@ -282,8 +286,9 @@ $checked-circle-radius-tablet: 9px;
     display: none;
     content: "";
     position: absolute;
-    top: calc(50% - $checked-circle-radius);
-    left: calc($empty-circle-radius * 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc($empty-circle-radius - $checked-circle-radius);
     width: $checked-circle-radius * 2;
     height: $checked-circle-radius * 2;
     border-radius: 100%;
@@ -291,7 +296,9 @@ $checked-circle-radius-tablet: 9px;
     box-sizing: border-box;
 
     @media (min-width: $width-tablet) {
-      top: calc(50% - $checked-circle-radius-tablet);
+      // top: calc(50% - $checked-circle-radius-tablet);
+      top: 50%;
+      transform: translateY(-50%);
       // left: $empty-circle-radius-tablet * 0.5;
       left: 11px; // why 11 ?
       width: $checked-circle-radius-tablet * 2;

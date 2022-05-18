@@ -32,14 +32,21 @@
 
   @media (min-width: $width-tablet) {
     margin: 0 0 34px 0;
-    padding: 0 80px;
-    height: 206px;
+    height: 208px;
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 0 46px 0;
     padding: 0;
     height: 202px;
+  }
+}
+
+.product__image {
+  object-fit: contain;
+
+  @media (min-width: $width-tablet) {
+    height: 100%;
+    width: auto;
   }
 }
 

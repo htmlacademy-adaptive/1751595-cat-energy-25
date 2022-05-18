@@ -74,8 +74,16 @@
   }
 
   &--before {
+    @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
+      background: url("../img/switcher-chubby-2x.png") no-repeat;
+    }
+
+    @media (min-width: $width-tablet) and (resolution: 1dppx) {
+      background: url("../img/switcher-chubby.png") no-repeat;
+    }
+
     @media (min-width: $width-tablet) {
-      background: url("../img/switcher-chubby-tablet.png") no-repeat;
+      background-size: cover;
       background-position: top 0 left -15px;
       width: 50%;
       left: 0;
@@ -83,9 +91,17 @@
   }
 
   &--after {
+    @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
+      background: url("../img/switcher-slim-2x.png") no-repeat;
+    }
+
+    @media (min-width: $width-tablet) and (resolution: 1dppx) {
+      background: url("../img/switcher-slim.png") no-repeat;
+    }
+
     @media (min-width: $width-tablet) {
-      background: url("../img/switcher-slim-tablet.png") no-repeat;
-      background-position: top 0 right -5px;
+      background-size: cover;
+      background-position: top 0 right;
       width: 50%;
       right: 0;
     }

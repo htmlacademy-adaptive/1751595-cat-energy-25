@@ -1,6 +1,7 @@
 .hero {
   padding: 27px 0 0 0;
-  background: url("../img/hero-mobile.jpg") no-repeat top center,
+  // background: image-set(url("../img/hero-mobile.jpg") 1x, url("../img/hero-mobile-2x.jpg") 2x) no-repeat top center,
+  background: image-set(url("../img/hero-mobile.jpg") 1x, url("../img/hero-mobile-2x.jpg") 2x) no-repeat top center,
     linear-gradient(to bottom, transparent 302px, #ffffff 302px 100%),
     linear-gradient(90deg, #63a73b 50%, transparent 50%),
     linear-gradient(90deg, transparent 50%, #62a53a  50%);
@@ -19,17 +20,34 @@
 
 .hero__body {
   background: url("../img/can.png") no-repeat center bottom 45px;
+  background-size: 280px 270px;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/can-2x.png") no-repeat center bottom 45px;
+    background-size: 280px 270px;
+  }
 
   @media (min-width: $width-tablet) {
     padding: 62px 0 526px 90px;
     box-sizing: border-box;
     background: url("../img/can-tablet.jpg") no-repeat center bottom;
+    background-size: 709px 609px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/can-tablet-2x.jpg") no-repeat center bottom;
+      background-size: 709px 609px;
+    }
   }
 
   @media (min-width: $width-desktop) {
     padding: 111px 506px 185px 80px;
     display: inline-block;
     background: url("../img/can-desktop.png") no-repeat right bottom;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/can-desktop-2x.png") no-repeat right bottom;
+      background-size: 552px 499px;
+    }
   }
 }
 
