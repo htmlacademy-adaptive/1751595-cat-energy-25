@@ -30,15 +30,15 @@ if (exampleBefore && exampleAfter && buttonAfter && buttonBefore) {
 }
 
 function showBeforeMobile() {
-  exampleBefore.classList.add('switcher__image--active')
-  exampleAfter.classList.remove('switcher__image--active')
+  exampleBefore.classList.add('switcher__image-block--active')
+  exampleAfter.classList.remove('switcher__image-block--active')
   rangeIndicator.classList.remove('switcher__range-indicator--after')
   rangeIndicator.classList.add('switcher__range-indicator--before')
 }
 
 function showAfterMobile() {
-  exampleBefore.classList.remove('switcher__image--active')
-  exampleAfter.classList.add('switcher__image--active')
+  exampleBefore.classList.remove('switcher__image-block--active')
+  exampleAfter.classList.add('switcher__image-block--active')
   rangeIndicator.classList.remove('switcher__range-indicator--before')
   rangeIndicator.classList.add('switcher__range-indicator--after')
 }

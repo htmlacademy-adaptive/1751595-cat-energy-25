@@ -8,21 +8,23 @@
   }
 }
 
+.copyright__icon {
+  fill: #666666;
+}
+
 .copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &:hover .copyright__path {
+  &:hover .copyright__icon {
     fill: $color-main;
   }
 
-  &:active .copyright__path {
-    fill: $color-main;
+  &:active {
     opacity: 0.3;
   }
 }
-
 
 .copyright__name {
   @media (min-width: $width-tablet) {
