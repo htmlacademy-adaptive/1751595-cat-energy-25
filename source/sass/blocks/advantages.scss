@@ -49,16 +49,34 @@
     margin: 0;
   }
 
+
+  &--nutrition::before {
+    background: url("../img/advantages-nutrition.svg") no-repeat center center;
+  }
+
+  &--consistency::before {
+    background: url("../img/advantages-consistency.svg") no-repeat center center;
+  }
+
+  &--intake::before {
+    background: url("../img/advantages-intake.svg") no-repeat center center;
+  }
+
+  &--time::before {
+    background: url("../img/advantages-time.svg") no-repeat center center;
+  }
+
   &::before {
+    content: "";
     position: absolute;
     width: 60px;
     height: 60px;
     top: 0;
     left: 0;
-    background-color: $color-main;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $color-main;
 
     @media (min-width: $width-tablet) {
       position: relative;
@@ -81,22 +99,6 @@
       font-family: $font-secondary;
       z-index: -1;
     }
-  }
-
-  &--nutrition::before {
-    content: url("../img/advantages-nutrition.svg");
-  }
-
-  &--consistency::before {
-    content: url("../img/advantages-consistency.svg");
-  }
-
-  &--intake::before {
-    content: url("../img/advantages-intake.svg");
-  }
-
-  &--time::before {
-    content: url("../img/advantages-time.svg");
   }
 }
 
