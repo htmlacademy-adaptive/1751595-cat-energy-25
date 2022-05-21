@@ -10,16 +10,27 @@
 }
 
 .social__link {
-  &:hover .social__path {
-    fill: $color-main;
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+
+  &:active {
+    opacity: 0.3;
   }
 
-  &:active .social__path {
+  &:active .social__icon {
     fill: $color-main;
-    opacity: 0.3;
   }
 
   &:not(:last-child) {
     margin-right: 24px;
+  }
+}
+
+.social__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: $color-main;
   }
 }

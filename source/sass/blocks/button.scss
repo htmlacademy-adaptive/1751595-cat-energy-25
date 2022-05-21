@@ -20,11 +20,16 @@
   }
 
   &--secondary {
-    background-color: $color-secondary;
-    color: $color-font;
+    background-color: #f2f2f2;
+    color: #444444;
 
     &:hover {
       background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+      color: rgba($color: #444444, $alpha: 0.3);
     }
   }
 

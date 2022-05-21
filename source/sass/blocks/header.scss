@@ -50,18 +50,19 @@
 }
 
 .header__logo-link {
-  padding: 13px 0 7px 90px;
-  background: url("../img/logo-mobile.svg") no-repeat;
-  display: inline-block;
+  min-height: 38px;
+  width: 191px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
 
   @media (min-width: $width-tablet) {
-    padding: 20px 0 8px 73px;
-    background: url("../img/logo-tablet.svg") no-repeat;
+    width: 174px;
   }
 
   @media (min-width: $width-desktop) {
-    padding: 22px 0 15px 84px;
-    background: url("../img/logo-desktop.svg") no-repeat;
+    width: 202px;
   }
 
   &:hover {
@@ -74,15 +75,26 @@
 }
 
 .header__logo {
-  width: 101px;
-  height: 18px;
+  width: 33px;
+  height: 38px;
 
+  @media (min-width: $width-tablet) {
+    width: 61px;
+    height: 50px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 71px;
+    height: 59px;
+  }
+}
+
+.header__logo-name {
   @media (min-width: $width-desktop) {
     width: 118px;
     height: 22px;
   }
 }
-
 
 .header__button {
   margin: 0;
