@@ -39,6 +39,7 @@ const copyFiles = () => {
   return gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
+  'source/manifest.webmanifest',
   'source/*.html',
   'source/js/*.js'], {base: 'source'}) // {base: 'source'} - to keep directories structure
   .pipe(gulp.dest('build'))
@@ -85,7 +86,7 @@ export const clean = () => del('build')
 
 const server = (done) => {
   browser.init({
-    server: {baseDir: 'source'}, // baseDir means directory which browser shows (source or build)
+    server: {baseDir: 'build'}, // baseDir means directory which browser shows (source or build)
     cors: true,
     notify: false,
     ui: false,
