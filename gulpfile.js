@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
-import squoosh from 'gulp-squoosh';
+import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
 import csso from 'gulp-csso';
 import del from 'del';
@@ -25,7 +25,7 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-export const minifyCSS = () => {
+const minifyCSS = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
   .pipe(sass().on('error', sass.logError))
   .pipe(postcss( [ autoprefixer() ] ))
@@ -35,21 +35,21 @@ export const minifyCSS = () => {
 }
 
 // copy files
-export const copyFiles = () => {
+const copyFiles = () => {
   return gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
   'source/*.html',
-  'source/js/*.js'], {base: 'source'}) // {base: 'source'} - to use directories structure
+  'source/js/*.js'], {base: 'source'}) // {base: 'source'} - to keep directories structure
   .pipe(gulp.dest('build'))
 }
 
-export const copyImages = () => {
-  return gulp.src('source/img/*.{png,jpg}')
-  .pipe(gulp.dest('build/img'))
+const webpCatalogCopy = () => {
+  return gulp.src('source/img/catalog/*.webp')
+  .pipe(gulp.dest('build/img/catalog'));
 }
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
   .pipe(svgo())
   .pipe(svgstore({inline: true}))
@@ -58,30 +58,34 @@ export const sprite = () => {
 
 // optimise
 
-export const svg = () => {
+const svg = () => {
   return gulp.src('source/img/**/*.svg', {base: 'source'})
   .pipe(svgo())
   .pipe(gulp.dest('build'))
 }
 
-export const optimiseImages = () => {
+const optimiseImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
+export const webpCatalog = () => {
+  return gulp.src('source/img/catalog/*.{png,jpg}')
+  .pipe(squoosh( { webp: {} } ))
+  .pipe(gulp.dest('source/img/catalog'))
+}
+
 
 // clean
 
-const clean = () => {
-  return del('build');
-  };
+export const clean = () => del('build')
 
 // Server
 
 const server = (done) => {
   browser.init({
-    server: {baseDir: 'build'}, // baseDir means directory browser shows
+    server: {baseDir: 'source'}, // baseDir means directory which browser shows (source or build)
     cors: true,
     notify: false,
     ui: false,
@@ -98,9 +102,9 @@ const watcher = () => {
 
 
 export const build = gulp.series(
-  clean, copyFiles, optimiseImages,
+  clean,
   gulp.parallel(
-  minifyCSS, svg,
+    copyFiles, optimiseImages, webpCatalogCopy, minifyCSS, svg,
   ),
   sprite,
 );
