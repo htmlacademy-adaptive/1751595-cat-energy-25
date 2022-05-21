@@ -40,14 +40,10 @@ const copyFiles = () => {
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
   'source/manifest.webmanifest',
+  'source/*img/**/*.webp',
   'source/*.html',
   'source/js/*.js'], {base: 'source'}) // {base: 'source'} - to keep directories structure
   .pipe(gulp.dest('build'))
-}
-
-const webpCatalogCopy = () => {
-  return gulp.src('source/img/catalog/*.webp')
-  .pipe(gulp.dest('build/img/catalog'));
 }
 
 const sprite = () => {
@@ -86,7 +82,17 @@ export const clean = () => del('build')
 
 const server = (done) => {
   browser.init({
-    server: {baseDir: 'build'}, // baseDir means directory which browser shows (source or build)
+    server: {baseDir: 'build'}, // baseDir means which directory browser shows (source or build)
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+const serverSource = (done) => {
+  browser.init({
+    server: {baseDir: 'source'}, // baseDir means which directory browser shows (source or build)
     cors: true,
     notify: false,
     ui: false,
@@ -101,16 +107,18 @@ const watcher = () => {
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
 export const build = gulp.series(
   clean,
   gulp.parallel(
-    copyFiles, optimiseImages, webpCatalogCopy, minifyCSS, svg,
+    copyFiles, optimiseImages, minifyCSS, svg,
   ),
   sprite,
 );
 
-
 export default gulp.series(
-  styles, server, watcher
+  build, server
+);
+
+export const watch = gulp.series(
+  styles, serverSource, watcher
 );
