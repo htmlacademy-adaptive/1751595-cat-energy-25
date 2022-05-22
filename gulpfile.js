@@ -9,6 +9,8 @@ import svgstore from 'gulp-svgstore';
 import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
 import csso from 'gulp-csso';
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
 import del from 'del';
 
 // Styles
@@ -25,6 +27,8 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
+// minify
+
 const minifyCSS = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
   .pipe(sass().on('error', sass.logError))
@@ -34,29 +38,32 @@ const minifyCSS = () => {
   .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
 }
 
+export const minifyHTML = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'))
+}
+
+export const minifyJS = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest('build/js'))
+}
+
 // copy files
 const copyFiles = () => {
   return gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
   'source/manifest.webmanifest',
-  'source/*img/**/*.webp',
-  'source/*.html',
-  'source/js/*.js'], {base: 'source'}) // {base: 'source'} - to keep directories structure
+  'source/*img/**/*.webp'], {base: 'source'}) // {base: 'source'} - to keep directories structure
   .pipe(gulp.dest('build'))
-}
-
-const sprite = () => {
-  return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({inline: true}))
-  .pipe(gulp.dest('build/img'))
 }
 
 // optimise
 
-const svg = () => {
-  return gulp.src('source/img/**/*.svg', {base: 'source'})
+export const svg = () => {
+  return gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'], {base: 'source'})
   .pipe(svgo())
   .pipe(gulp.dest('build'))
 }
@@ -73,6 +80,12 @@ export const webpCatalog = () => {
   .pipe(gulp.dest('source/img/catalog'))
 }
 
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({inline: true}))
+  .pipe(gulp.dest('build/img'))
+}
 
 // clean
 
@@ -110,7 +123,7 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   gulp.parallel(
-    copyFiles, optimiseImages, minifyCSS, svg,
+    copyFiles, optimiseImages, minifyCSS, minifyHTML, minifyJS, svg,
   ),
   sprite,
 );
