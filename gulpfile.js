@@ -74,10 +74,14 @@ const optimiseImages = () => {
   .pipe(gulp.dest('build/img'))
 }
 
-export const webpCatalog = () => {
-  return gulp.src('source/img/catalog/*.{png,jpg}')
+export const webpConvert = () => {
+  return gulp.src([
+    'source/img/catalog/*.{png,jpg}',
+    'source/img/hero/*.{png,jpg}',
+    'source/img/special/*.{png,jpg}',
+    'source/img/switcher/*.{png,jpg}'], {base: 'source'})
   .pipe(squoosh( { webp: {} } ))
-  .pipe(gulp.dest('source/img/catalog'))
+  .pipe(gulp.dest('source'))
 }
 
 const sprite = () => {

@@ -85,11 +85,11 @@
 
   &--before {
     @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
-      background: url("../img/switcher-chubby-2x.png") no-repeat;
+      background: url("../img/switcher/switcher-chubby-2x.webp") no-repeat;
     }
 
     @media (min-width: $width-tablet) and (resolution: 1dppx) {
-      background: url("../img/switcher-chubby.png") no-repeat;
+      background: url("../img/switcher/switcher-chubby.webp") no-repeat;
     }
 
     @media (min-width: $width-tablet) {
@@ -102,11 +102,11 @@
 
   &--after {
     @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
-      background: url("../img/switcher-slim-2x.png") no-repeat;
+      background: url("../img/switcher/switcher-slim-2x.webp") no-repeat;
     }
 
     @media (min-width: $width-tablet) and (resolution: 1dppx) {
-      background: url("../img/switcher-slim.png") no-repeat;
+      background: url("../img/switcher/switcher-slim.webp") no-repeat;
     }
 
     @media (min-width: $width-tablet) {
