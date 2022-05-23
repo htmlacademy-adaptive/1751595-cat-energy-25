@@ -1,3 +1,13 @@
+.switcher {
+  @media (min-width: $width-tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 0;
+  }
+}
+
 .switcher__button {
   padding: 8px 6px;
   font-family: $font-secondary;
@@ -20,7 +30,7 @@
     $width: 45px;
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: 5px;
     left: calc(50% - $width / 2);
     width: $width;
 
@@ -30,11 +40,11 @@
   }
 
   &--before {
-    margin: 0 13px 0 0;
+    margin: 0 12px 0 0;
   }
 
   &--after {
-    margin: 0 0 0 13px;
+    margin: 0 0 0 12px;
   }
 }
 
@@ -61,9 +71,13 @@
   height: 232px;
 
   @media (min-width: $width-tablet) {
-    margin: 0 auto 25px auto;
+    margin: 0 auto 33px auto;
     width: 592px;
-    height: 511px;
+    height: 500px;
+  }
+
+  @media (min-width: $width-desktop) {
+    margin-bottom: 24px;
   }
 }
 
@@ -94,9 +108,13 @@
 
     @media (min-width: $width-tablet) {
       background-size: cover;
-      background-position: top 0 left -15px;
+      background-position: top 0 left -7px;
       width: 50%;
       left: 0;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-position: 0 0;
     }
   }
 
@@ -111,9 +129,13 @@
 
     @media (min-width: $width-tablet) {
       background-size: cover;
-      background-position: top 0 right;
+      background-position: top 0 right 8px;
       width: 50%;
       right: 0;
+    }
+
+    @media (min-width: $width-desktop) {
+      background-position: top 0 right 8px;
     }
   }
 }

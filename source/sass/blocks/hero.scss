@@ -18,16 +18,16 @@
 }
 
 .hero__body {
-  background: url("../img/hero/can.webp") no-repeat center bottom 45px;
+  background: url("../img/hero/can.webp") no-repeat center bottom 43px;
   background-size: 280px 270px;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/hero/can-2x.webp") no-repeat center bottom 45px;
+    background: url("../img/hero/can-2x.webp") no-repeat center bottom 43px;
     background-size: 280px 270px;
   }
 
   @media (min-width: $width-tablet) {
-    padding: 62px 0 526px 90px;
+    padding: 66px 0 526px 90px;
     box-sizing: border-box;
     background: url("../img/hero/can-tablet.webp") no-repeat center bottom;
     background-size: 709px 609px;
@@ -41,10 +41,10 @@
   @media (min-width: $width-desktop) {
     padding: 111px 506px 185px 80px;
     display: inline-block;
-    background: url("../img/hero/can-desktop.webp") no-repeat right bottom;
+    background: url("../img/hero/can-desktop.webp") no-repeat right 5px bottom 55px;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/hero/can-desktop-2x.webp") no-repeat right bottom;
+      background: url("../img/hero/can-desktop-2x.webp") no-repeat right 5px bottom 55px;
       background-size: 552px 499px;
     }
   }
@@ -71,7 +71,7 @@
 }
 
 .hero__slogan {
-  margin: 0 0 302px 0;
+  margin: 0 0 298px 0;
   padding: 0;
   text-align: center;
   font-family: $font-secondary;
@@ -93,8 +93,12 @@
 }
 
 .hero__link {
+  padding: 11px 0;
+  font-size: 14px;
+  line-height: 18px;
+
   @media (min-width: $width-tablet) {
-    padding: 14px 26px;
+    padding: 17px 26px;
     display: inline-block;
     font-size: 20px;
     line-height: 20px;

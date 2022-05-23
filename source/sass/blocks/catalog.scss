@@ -1,5 +1,4 @@
 .catalog {
-  padding: 8px 0 0 0;
   border-top: 1px solid #ebebeb;
   display: grid;
   grid-template-columns: 1fr;
@@ -7,7 +6,8 @@
   @media (min-width: $width-tablet) {
     margin: 0 auto;
     width: $container-tablet;
-    gap: 60px;
+    row-gap: 65px;
+    column-gap: 60px;
     grid-template-columns: 1fr 1fr;
     border-top: none;
   }

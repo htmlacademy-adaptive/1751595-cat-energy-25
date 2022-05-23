@@ -34,7 +34,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 77px 0 53px 53px;
+    padding: 75px 0 53px 53px;
   }
 
   @media (min-width: $width-desktop) {
@@ -44,10 +44,10 @@
   }
 
   &--slim {
-    background: $color-secondary url("../img/categories-slim.svg") no-repeat 24px 22px;
+    background: $color-secondary url("../img/categories-slim.svg") no-repeat 20px 22px;
 
     @media (min-width: $width-tablet) {
-      background-position: top 81px right 62px;
+      background-position: top 77px right 62px;
       background-size: 200px 211px;
     }
 
@@ -83,7 +83,7 @@
   line-height: 37px;
 
   @media (min-width: $width-tablet) {
-    margin: 0 0 24px 0;
+    margin: 0 0 25px 0;
     padding: 0;
     max-width: 340px;
     font-size: 36px;
@@ -109,6 +109,7 @@
   }
 
   @media (min-width: $width-desktop) {
+    margin: 0 0 22px 0;
     max-width: fit-content;
   }
 }
