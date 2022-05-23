@@ -113,7 +113,7 @@
 
               </dl>
               <p class="example__costs">
-                <span>Затраты на питание:</span>
+                <span class="example__costs-text">Затраты на питание:</span>
                 <span>15 000 руб.</span>
               </p>
             </div>
@@ -122,12 +122,16 @@
           <div class="example__switcher switcher">
             <div class="example__images switcher__images">
               <div id="example-before" class="switcher__image-block switcher__image-block--before switcher__image-block--active">
-                <img  class="switcher__image switcher__image--before" width="280" height="232" alt="Полный кот Борис"
-                    src="img/switcher/switcher-chubby.webp" srcset="img/switcher/switcher-chubby-2x.webp 2x, img/switcher/switcher-chubby.webp 1x">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/switcher/switcher-chubby-mobile-2x.webp 2x, img/switcher/switcher-chubby-mobile.webp 1x">
+                  <img  class="switcher__image switcher__image--before" width="280" height="232" alt="Полный кот Борис" src="img/switcher/switcher-chubby-mobile.webp">
+                </picture>
               </div>
               <div id="example-after" class="switcher__image-block switcher__image-block--after">
-                <img  class="switcher__image switcher__image--after" width="280" height="232" alt="Стройный кот Борис"
-                src="img/switcher/switcher-slim.webp" srcset="img/switcher/switcher-slim-2x.webp 2x, img/switcher/switcher-slim.webp 1x">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="img/switcher/switcher-slim-2x.webp 2x, img/switcher/switcher-slim.webp 1x">
+                  <img  class="switcher__image switcher__image--after" width="280" height="232" alt="Стройный кот Борис" src="img/switcher/switcher-slim.webp">
+            </picture>
               </div>
             </div>
             <div class="example__range switcher__range">
@@ -146,7 +150,8 @@
       <!-- location -->
       <section class="location location--home">
         <div class="location__info container">
-          <h2 class="location__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <h2 class="location__title">Приглашаем
+            <br>к сотрудничеству дилеров!</h2>
           <address class="location__address">
             <span class="location__street">ул. Большая
               <br>Конюшенная, д.19/8

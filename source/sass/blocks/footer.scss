@@ -2,7 +2,11 @@
   background: $color-secondary;
 
   @media (min-width: $width-tablet) {
-    padding: 58px 0 55px 0;
+    padding: 60px 0 55px 0;
+  }
+
+  @media (min-width: $width-desktop) {
+    padding: 55px 0;
   }
 }
 
@@ -15,7 +19,7 @@
 }
 
 .footer__logo {
-  padding: 39px 0 32px 0;
+  padding: 39px 0 25px 0;
   display: block;
   text-align: center;
   border-bottom: 1px solid #d9d9d9;
