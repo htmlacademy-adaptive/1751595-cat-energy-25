@@ -24,7 +24,7 @@
 
   @media (min-width: $width-desktop) {
     $width: 565px;
-    padding: 60px 84px 52px 80px;
+    padding: 60px 84px 60px 80px;
     box-sizing: border-box;
     width: $width;
     position: absolute;
@@ -84,8 +84,14 @@
   padding: 0;
   border: none;
   outline: none;
+  box-sizing: border-box;
 
   @media (min-width: $width-tablet) {
     height: 400px;
+  }
+
+  &--js {
+    background: url("../img/location/location-map.jpg") no-repeat center center;
+    // background-image: image-set(url("../../img/location/location-map-2x.jpg") 1x, url("../img/hero/hero-mobile-2x.webp") 2x) no-repeat top center;
   }
 }

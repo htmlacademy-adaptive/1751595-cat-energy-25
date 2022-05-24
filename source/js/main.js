@@ -2,10 +2,14 @@
 const menuButton = document.querySelector('#menu-button')
 const menu = document.querySelector('#menu')
 
+const map = document.querySelector('#map')
+
 if (menuButton && menu) {
   start()
   menuButton.addEventListener('click', toggleMenu)
 }
+
+if (map) hideMap()
 
 function start() {
   menuButton.classList.remove('header__button--js')
@@ -41,4 +45,9 @@ function showAfterMobile() {
   exampleAfter.classList.add('switcher__image-block--active')
   rangeIndicator.classList.remove('switcher__range-indicator--before')
   rangeIndicator.classList.add('switcher__range-indicator--after')
+}
+
+// map
+function hideMap() {
+  map.classList.remove('location__map--js')
 }

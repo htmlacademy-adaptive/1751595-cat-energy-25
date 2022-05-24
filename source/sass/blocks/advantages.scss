@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding: 71px 0 0 0;
+    padding: 21px 0 0 0;
   }
 }
 
@@ -25,7 +25,10 @@
 
   @media (min-width: $width-desktop) {
     padding: 0;
-    flex-wrap: nowrap;
+    // gap: 0 ($container-desktop - 250 * 4) / 3;
+    gap: 0 74px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

@@ -77,7 +77,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 auto 69px auto;
+    margin: 0 auto 66px auto;
     display: flex;
     max-width: $container-desktop;
   }
@@ -144,14 +144,16 @@
   &--contacts {
     @media (min-width: $width-desktop) {
       margin: 0;
-      width: 50%;
+      padding: 0 0 15px 0;
+      width: calc(50% - 80px / 2);
     }
   }
 }
 
 .form__label--contacts:not(:last-child) {
   @media (min-width: $width-desktop) {
-    margin: 0 80px 0 0;
+    margin: 0;
+    width: calc(50% - 80px / 2);
   }
 }
 
@@ -207,25 +209,49 @@
 
 .form__input-text--email {
   padding-right: 40px;
-  background: url("../img/envelope.svg") no-repeat;
-  background-position: right 15px center;
-  background-size: 20px 14px;
+  background: url("../img/envelope.svg") no-repeat right 15px center/20px 14px;
+
+  &:focus {
+    background: url("../img/envelope-focus.svg") no-repeat right 15px center/20px 14px;
+  }
+
+  &:focus:invalid {
+    background: url("../img/envelope-error.svg") no-repeat right 15px center/20px 14px;
+  }
 
   @media (min-width: $width-tablet) {
     padding-right: 45px;
     background-position: right 19px center;
+
+    &:focus,
+    &:focus:invalid {
+      padding-right: 45px;
+      background-position: right 19px center;
+    }
   }
 }
 
 .form__input-text--phone {
   padding-right: 40px;
-  background: url("../img/phone.svg") no-repeat;
-  background-position: right 15px center;
-  background-size: 20px 20px;
+  background: url("../img/phone.svg") no-repeat right 15px center / 20px 20px;
+
+  &:focus {
+    background: url("../img/phone-focus.svg") no-repeat right 15px center / 20px 20px;
+  }
+
+  &:focus:invalid {
+    background: url("../img/phone-error.svg") no-repeat right 15px center / 20px 20px;
+  }
 
   @media (min-width: $width-tablet) {
     padding-right: 45px;
     background-position: right 19px center;
+
+    &:focus,
+    &:focus:invalid {
+      padding-right: 45px;
+      background-position: right 19px center;
+    }
   }
 }
 
@@ -326,6 +352,10 @@ $checked-circle-radius-tablet: 9px;
   &:disabled + .form__radio-label {
     opacity: 0.3;
   }
+
+  &:focus + .form__radio-label::before {
+    border: 1px solid #444444;
+  }
 }
 
 .form__contacts-block {
@@ -334,6 +364,10 @@ $checked-circle-radius-tablet: 9px;
   @media (min-width: $width-tablet) {
     margin: 0 0 63px 0;
   }
+
+  @media (min-width: $width-desktop) {
+    margin: 0 0 52px 0;
+  }
 }
 
 .form__contacts {
@@ -341,6 +375,8 @@ $checked-circle-radius-tablet: 9px;
     margin: 0 auto;
     max-width: $container-desktop;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -352,7 +388,7 @@ $checked-circle-radius-tablet: 9px;
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 0 72px 0;
+    margin: 0 0 69px 0;
   }
 }
 
@@ -364,7 +400,7 @@ $checked-circle-radius-tablet: 9px;
   }
 
   @media (min-width: $width-desktop) {
-    margin: 0 0 60px 0;
+    margin: 0 0 45px 0;
   }
 }
 
@@ -381,6 +417,9 @@ $checked-circle-radius-tablet: 9px;
 
   @media (min-width: $width-desktop) {
     padding: 0 24px 0 0;
+    display: grid;
+    gap: 0 103px;
+    grid-template-columns: repeat(4, 1fr);
     max-width: $container-desktop;
   }
 }
@@ -400,7 +439,7 @@ $checked-circle-radius-tablet: 9px;
   }
 
   @media (min-width: $width-desktop) {
-    margin-bottom: 0;
+    margin: 0 0 15px 0;
   }
 }
 
@@ -455,6 +494,10 @@ $check-width_tablet: 24px;
 
   &:disabled + .form__check-label {
     opacity: 0.3;
+  }
+
+  &:focus + .form__check-label::before {
+    border: 1px solid #444444;
   }
 }
 
