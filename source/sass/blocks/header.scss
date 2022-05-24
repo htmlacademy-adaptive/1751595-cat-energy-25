@@ -12,7 +12,7 @@
   @media (min-width: $width-desktop) {
     &--home {
       $hero-desktop-width: 1044px;
-      background: image-set(url("../img/hero/hero-desktop.webp") 1x, url("../img/hero/hero-desktop-2x.webp") 2x) no-repeat calc(50% + $hero-desktop-width / 2),
+      background: image-set(url("../img/hero/hero-desktop.webp") 1x, url("../img/hero/hero-desktop-2x.webp") 2x) no-repeat bottom left calc(50% + $hero-desktop-width / 2),
         linear-gradient(90deg, transparent 50%, #61a53a 50%);
     }
   }
@@ -22,7 +22,7 @@
   position: relative;
 
   @media (min-width: $width-tablet) {
-    padding: 24px 0 0 0;
+    padding: 27px 0 0 0;
     display: flex;
     justify-content: space-between;
     max-width: $container-tablet;
@@ -30,7 +30,7 @@
   }
 
   @media (min-width: $width-desktop) {
-    padding: 53px 0 0 0;
+    padding: 60px 0 0 0;
     max-width: $container-desktop;
     margin: 0 auto;
   }
