@@ -1,41 +1,16 @@
 .special {
-  @media (min-resolution: 2dppx) {
-    background: url("../img/special/special-2x.webp") no-repeat;
-    background-size: cover;
-  }
-
-  @media (resolution: 1dppx) {
-    background: url("../img/special/special.webp") no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: $width-tablet) and (min-resolution: 2dppx) {
-    background: url("../img/special/special-tablet-2x.webp") no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: $width-tablet) and (resolution: 1dppx) {
-    background: url("../img/special/special-tablet.webp") no-repeat;
-    background-size: cover;
-  }
+  background: image-set(url("../img/special/special.webp") 1x, url("../img/special/special-2x.webp") 2x) no-repeat;
+  background-size: cover;
 
   @media (min-width: $width-tablet) {
     padding: 71px 124px 69px 422px;
-    background-size: cover;
-  }
-
-  @media (min-width: $width-desktop) and (min-resolution: 2dppx) {
-    background: url("../img/special/special-desktop-2x.webp") no-repeat;
-    background-size: cover;
-  }
-
-  @media (min-width: $width-desktop) and (resolution: 1dppx) {
-    background: url("../img/special/special-desktop.webp") no-repeat;
+    background: image-set(url("../img/special/special-tablet.webp") 1x, url("../img/special/special-tablet-2x.webp") 2x) no-repeat;
     background-size: cover;
   }
 
   @media (min-width: $width-desktop) {
     padding: 185px 43px 42px 41px;
+    background: image-set(url("../img/special/special-desktop.webp") 1x, url("../img/special/special-desktop-2x.webp") 2x) no-repeat;
     background-size: cover;
   }
 

@@ -107,10 +107,10 @@
     }
 
     @media (min-width: $width-tablet) {
-      background-size: cover;
-      background-position: top 0 left -7px;
+      background: image-set(url("../img/switcher/switcher-chubby.webp") 1x, url("../img/switcher/switcher-chubby-2x.webp") 2x) top 0 left -7px / cover;
       width: 50%;
       left: 0;
+      top: 0;
     }
 
     @media (min-width: $width-desktop) {
@@ -128,10 +128,10 @@
     }
 
     @media (min-width: $width-tablet) {
-      background-size: cover;
-      background-position: top 0 right 8px;
+      background: image-set(url("../img/switcher/switcher-slim.webp") 1x, url("../img/switcher/switcher-slim-2x.webp") 2x) top 0 right 8px / cover;
       width: 50%;
       right: 0;
+      top: 0;
     }
 
     @media (min-width: $width-desktop) {
